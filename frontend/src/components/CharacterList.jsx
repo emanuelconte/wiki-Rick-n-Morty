@@ -1,24 +1,36 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Para navegação entre páginas, se for o caso
 
 const CharacterList = () => {
     const [characters, setCharacters] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:3001/api/characters')
-            .then((response) => setCharacters(response.data.results))
-            .catch((error) => console.error(error));
+        const fetchCharacters = async () => {
+            const response = await fetch('http://localhost:3001/api/characters'); // Ou a URL que você configurou
+            const data = await response.json();
+            console.log(data);
+            setCharacters(data.results);
+        };
+
+        fetchCharacters();
     }, []);
+
+    if (!Array.isArray(characters)) {
+        console.error('characters não é um array', characters);
+        return <div>Erro ao carregar personagens</div>;
+    }
+
+    if (characters.length === 0) return <div>Loading...</div>;
 
     return (
         <div>
             <h1>Lista de Personagens</h1>
             <ul>
-                {characters.map((character) => (
+                {characters.map(character => (
                     <li key={character.id}>
-                        <Link to={`/character/${character.id}`}>
-                            {character.name}
+                        <Link to={`/characters/${character.id}`}>
+                            <h2>{character.name}</h2>
+                            <img src={character.image} alt={character.name} />
                         </Link>
                     </li>
                 ))}
