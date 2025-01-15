@@ -1,56 +1,56 @@
 # Character Wiki Project
 
-## Sobre o Projeto
-Este projeto é um Wiki dinâmico de personagens, desenvolvido utilizando **React** e **JavaScript**. Ele consome dados de uma API para exibir uma lista de personagens de uma série de TV, permitindo que os usuários explorem informações detalhadas sobre cada personagem.
+## About the Project
+This project is a dynamic character Wiki developed using **React** and **JavaScript**. It consumes data from an API to display a list of characters from a TV series, allowing users to explore detailed information about each character from Rick and Morty.
 
-## Funcionalidades
-- Listagem dinâmica de personagens.
-- Busca por personagens.
-- Visualização detalhada de informações individuais de cada personagem.
-- Navegação amigável entre páginas.
+## Features
+- Dynamic listing of characters.
+- Search for characters.
+- Detailed view of individual character information.
+- User-friendly navigation between pages.
 
-## Tecnologias Utilizadas
+## Technologies Used
 - **Frontend**: React
-- **Linguagem**: JavaScript
-- **Gerenciamento de Estado**: React Hooks (useState, useEffect)
-- **Estilização**: Bootstrap / Material-UI / Tailwind (escolha durante o desenvolvimento)
-- **Chamadas HTTP**: Axios
+- **Language**: JavaScript
+- **State Management**: React Hooks (useState, useEffect)
+- **Styling**: Bootstrap / Material-UI / Tailwind (to be decided during development)
+- **HTTP Requests**: Axios
 
-## Instalação e Configuração
-Siga os passos abaixo para configurar o projeto em seu ambiente local:
+## Installation and Setup
+Follow the steps below to set up the project in your local environment:
 
-### 1. Clone o Repositório
+### 1. Clone the Repository
 ```bash
 git clone https://github.com/emanuelconte/wiki-Rick-n-Morty.git
 cd character-wiki
 ```
 
-### 2. Instale as Dependências
-Certifique-se de ter o Node.js instalado. Em seguida, execute:
+### 2. Install Dependencies
+Make sure Node.js is installed. Then, run:
 ```bash
 npm install
 ```
 
-### 3. Execute o Projeto
-Inicie o servidor de desenvolvimento com o comando:
+### 3. Run the Project
+Start the development server with the command:
 ```bash
 npm start
 ```
-O aplicativo será aberto em [http://localhost:3000](http://localhost:3000).
+The app will open at [http://localhost:3000](http://localhost:3000).
 
-## Como Contribuir
-1. Faça um fork do projeto.
-2. Crie um branch para sua funcionalidade (
-`git checkout -b feature/nome-da-funcionalidade`).
-3. Implemente sua funcionalidade e faça commit das mudanças.
-4. Envie um pull request para análise.
+## How to Contribute
+1. Fork the repository.
+2. Create a branch for your feature (
+`git checkout -b feature/your-feature-name`).
+3. Implement your feature and commit the changes.
+4. Submit a pull request for review.
 
-## Licença
-Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais informações.
+## License
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
-## Contato
-Para dúvidas ou sugestões, entre em contato:
-- **Nome**: Emanuel
+## Contact
+For questions or suggestions, reach out:
+- **Name**: Emanuel
 - **Email**: [emanuelcontecardoso@gmail.com](mailto:emanuelcontecardoso@gmail.com)
 - **GitHub**: [emanuelconte](https://github.com/emanuelconte)
 
