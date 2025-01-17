@@ -4,7 +4,7 @@
 This project is a dynamic character Wiki developed using **React** and **JavaScript**. It consumes data from an API to display a list of characters from a TV series, allowing users to explore detailed information about each character from Rick and Morty.
 
 ## Features
-- Dynamic listing of characters
+- Dynamic listing of characters..
 - Search for characters.
 - Detailed view of individual character information.
 - User-friendly navigation between pages.
