@@ -6,7 +6,7 @@ const CharacterList = () => {
 
     useEffect(() => {
         const fetchCharacters = async () => {
-            const response = await fetch('http://localhost:3001/api/characters'); // Ou a URL que você configurou
+            const response = await fetch('http://localhost:3001/api/character');
             const data = await response.json();
             console.log(data);
             setCharacters(data.results);
@@ -24,11 +24,13 @@ const CharacterList = () => {
 
     return (
         <div>
-            <h1>Lista de Personagens</h1>
+            <div>
+                <h1 className='section-title'>Lista de Personagens</h1>
+            </div>
             <ul>
                 {characters.map(character => (
                     <li key={character.id}>
-                        <Link to={`/characters/${character.id}`}>
+                        <Link to={`/character/${character.id}`}>
                             <h2>{character.name}</h2>
                             <img src={character.image} alt={character.name} />
                         </Link>
