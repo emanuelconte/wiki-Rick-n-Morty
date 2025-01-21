@@ -4,8 +4,11 @@
 
 @layer components {
   .section-title {
-    @apply text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#0e93aa] text-transparent bg-clip-text;
+    @apply text-center text-5xl md:text-[54px] md:leading-[60px] bg-clip-text;
     font-family: 'Get Schwifty', sans-serif;
+    -webkit-text-stroke: 1px #bfde42;
+    color: #41b4c9;
+    font-size: 68px;
   }
 
   .add-border {

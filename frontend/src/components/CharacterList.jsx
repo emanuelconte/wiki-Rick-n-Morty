@@ -23,10 +23,10 @@ const CharacterList = () => {
     if (characters.length === 0) return <div>Loading...</div>;
 
     return (
-      <section className="w-full p-8 bg-[#203745]">
+      <section className="w-full p-8">
         <div className='container'>
 
-          <div className="p-8 m-8 add-border items-center">
+          <div className="p-8 m-8 items-center">
             <h1 className="section-title p-2">Rick and Morty Wiki</h1>
           </div>
 
