@@ -15,12 +15,21 @@
     border: 1px solid red;
   }
 
+  font-audiowide {
+    font-family: 'Audiowide', sans-serif;
+  }
+
   
 }
 
 @font-face {
   font-family: 'Get Schwifty';
   src: url('./assets/fonts/get_schwifty.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Audiowide';
+  src: url('./assets/fonts/Audiowide-Regular.ttf') format('truetype');
 }
 
 body {

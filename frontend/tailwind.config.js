@@ -10,6 +10,7 @@ module.exports = {
     extend: {
       fontFamily: {
         schwifty: ['Get Schwifty', 'sans-serif'],
+        audiowide: ['Audiowide', 'sans-serif'],
       },
     },
   },

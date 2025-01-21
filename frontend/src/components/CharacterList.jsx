@@ -29,32 +29,64 @@ const CharacterList = () => {
           <h1 className="section-title p-2">Rick and Morty Wiki</h1>
         </div>
 
-        <div className="w-full h-auto p-4 items-center">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
-                {characters.map((character) => (
-                    <div
-                    key={character.id}
-                    className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-                    >
-                    <Link to={`/character/${character.id}`}>
-                        <img
-                        src={character.image}
-                        alt={character.name}
-                        className="w-full h-56 object-cover"
-                        />
-                        <div className="p-1">
-                        <h2 className="text-lg font-bold text-center">
-                            {character.name}
-                        </h2>
-                        </div>
-                    </Link>
-                    </div>
-                ))}
-            </div>
+        <div className="text-center my-6 p-4 text-white rounded-lg shadow-md add-border">
+          <p className="text-lg leading-relaxed ">
+            Welcome to the <strong>Rick and Morty Character Wiki</strong>! This
+            project is an interactive platform built using{" "}
+            <strong>React</strong>, <strong>JavaScript</strong>, and{" "}
+            <strong>Tailwind CSS</strong>, designed to explore and learn about
+            the vibrant characters of the popular TV series{" "}
+            <em>Rick and Morty</em>. The website dynamically fetches data from
+            the{" "}
+            <a
+              href="https://rickandmortyapi.com"
+              className="underline hover:text-yellow-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Rick and Morty API
+            </a>
+            , providing an engaging and responsive experience for users.
+          </p>
+          <p className="text-lg leading-relaxed mt-4">
+            This project was developed by <strong>Emanuel</strong>, a passionate
+            backend developer exploring front-end technologies. The source code
+            is available on GitHub: 
+            <a
+              href="https://github.com/emanuelconte/wiki-Rick-n-Morty"
+              className="underline hover:text-yellow-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Rick and Morty Character Wiki Repository
+            </a>
+            .
+          </p>
         </div>
 
-        
-
+        <div className="w-full h-auto p-4 items-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+            {characters.map((character) => (
+              <div
+                key={character.id}
+                className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+              >
+                <Link to={`/character/${character.id}`}>
+                  <img
+                    src={character.image}
+                    alt={character.name}
+                    className="w-full h-56 object-cover"
+                  />
+                  <div className="p-1">
+                    <h2 className="text-lg font-bold text-center font-audiowide">
+                      {character.name}
+                    </h2>
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
