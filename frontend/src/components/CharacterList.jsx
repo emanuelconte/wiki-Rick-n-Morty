@@ -23,21 +23,18 @@ const CharacterList = () => {
     if (characters.length === 0) return <div>Loading...</div>;
 
     return (
-        <div>
-            <div>
-                <h1 className='section-title'>Lista de Personagens</h1>
-            </div>
-            <ul>
-                {characters.map(character => (
-                    <li key={character.id}>
-                        <Link to={`/character/${character.id}`}>
-                            <h2>{character.name}</h2>
-                            <img src={character.image} alt={character.name} />
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+      <section className="w-full p-8 bg-[#203745]">
+        <div className='container'>
+
+          <div className="p-8 m-8 add-border items-center">
+            <h1 className="section-title p-2">Rick and Morty Wiki</h1>
+          </div>
+
+
+          
+
         </div>
+      </section>
     );
 };
 
