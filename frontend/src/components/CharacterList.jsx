@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom"; // Para navegação entre páginas, se for o caso
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const CharacterList = () => {
   const [characters, setCharacters] = useState([]);
@@ -112,7 +113,7 @@ const CharacterList = () => {
         </div>
 
         <div className="w-full h-auto p-4 items-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {characters.map((character) => (
               <div
                 key={character.id}
