@@ -8,11 +8,10 @@ const App = () => {
         <Router>
             <Routes>
                 <Route path="/" element={<CharacterList />} />
-                <Route path="/characters/:characterId" element={<CharacterDetails />} />
+                <Route path="/character/:id" element={<CharacterDetails />} />
             </Routes>
         </Router>
     );
 };
 
-// A exportação padrão deve ser aqui
 export default App;

@@ -2,20 +2,28 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 const CharacterDetails = () => {
-    const { characterId } = useParams();  // Pega o ID da URL
+    const { id } = useParams();
     const [character, setCharacter] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const fetchCharacter = async () => {
-            const response = await fetch(`http://localhost:3001/api/character/${characterId}`);
-            const data = await response.json();
-            console.log(data);
-            setCharacter(data.results);
+            try {
+                const response = await fetch(`http://localhost:3001/api/character/${id}`);
+                const data = await response.json();
+                setCharacter(data);
+            } catch (error) {
+                console.error('Error fetching character:', error);
+            } finally {
+                setLoading(false);
+            }
         };
-        fetchCharacter();
-    }, [characterId]);
 
-    if (!character) return <div>Loading...</div>;
+        fetchCharacter();
+    }, [id]);
+
+    if (loading) return <div>Loading...</div>;
+    if (!character) return <div>Character not found</div>;
 
     return (
         <div>
