@@ -15,8 +15,17 @@
     border: 1px solid red;
   }
 
-  font-audiowide {
+  .font-audiowide {
     font-family: 'Audiowide', sans-serif;
+  }
+
+  .font-rick {
+    font-family: 'Get Schwifty', sans-serif;
+  }
+
+  .btn-page {
+    @apply px-4 py-2 bg-[#41b4c9] text-[#bfde42] rounded-lg hover:bg-[#256672] disabled:bg-[#7d8181];
+    font-family: 'Get Schwifty', sans-serif;
   }
 
   

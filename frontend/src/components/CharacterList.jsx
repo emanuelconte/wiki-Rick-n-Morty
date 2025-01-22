@@ -105,15 +105,15 @@ const CharacterList = () => {
         <div className="flex justify-center mt-4 space-x-4">
           <button
             onClick={handlePrevPage}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300"
+            className="btn-page"
             disabled={page === 1}
           >
             Previous
           </button>
-          <span className="text-lg font-bold">{`Page ${page} of ${totalPages}`}</span>
+          <span className="text-lg pt-1 text-white font-audiowide items-center">{`Page ${page} of ${totalPages}`}</span>
           <button
             onClick={handleNextPage}
-            className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 disabled:bg-gray-300"
+            className="btn-page"
             disabled={page === totalPages}
           >
             Next
