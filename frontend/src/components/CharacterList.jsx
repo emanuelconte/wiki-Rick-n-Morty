@@ -30,10 +30,12 @@ const CharacterList = () => {
 
   const handleNextPage = () => {
     if (page < totalPages) setPage((prevPage) => prevPage + 1);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handlePrevPage = () => {
     if (page > 1) setPage((prevPage) => prevPage - 1);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handlePageClick = (pageNumber) => {
@@ -76,7 +78,7 @@ const CharacterList = () => {
         </div>
 
         <div className="text-center my-6 p-4 text-white rounded-lg shadow-md">
-          <p className="text-lg leading-relaxed ">
+          <p className="text-lg leading-relaxed">
             Welcome to the <strong>Rick and Morty Character Wiki</strong>! This
             project is an interactive platform built using{" "}
             <strong>React</strong>, <strong>JavaScript</strong>, and{" "}
