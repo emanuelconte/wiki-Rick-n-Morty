@@ -22,8 +22,8 @@ const CharacterList = () => {
   }, [page]);
 
   if (!Array.isArray(characters)) {
-    console.error("characters não é um array", characters);
-    return <div>Erro ao carregar personagens</div>;
+    console.error("characters is not an array", characters);
+    return <div>Error fetching characters</div>;
   }
 
   if (characters.length === 0) return <div>Loading...</div>;
@@ -34,6 +34,38 @@ const CharacterList = () => {
 
   const handlePrevPage = () => {
     if (page > 1) setPage((prevPage) => prevPage - 1);
+  };
+
+  const handlePageClick = (pageNumber) => {
+    setPage(pageNumber);
+  }
+
+  const renderPagination = () => {
+    const pages = [];
+    const maxPagesToShow = 5;
+    const startPage = Math.max(1, page - Math.floor(maxPagesToShow / 2));
+    const endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+
+    for (let i= startPage; i <= endPage; i++) {
+      pages.push(
+        <button
+          key={i}
+          onClick={() => handlePageClick(i)}
+          className={`px-3 py-1 mx-1 rounded-lg ${
+            i === page ? "bg-[#41b4c9] text-white font-audiowide" : "bg-gray-200 hover:bg-[#256672] font-audiowide"
+          }`}
+        >
+          {i}
+        </button>
+      );
+    }
+
+    return (
+      <div className="flex justify-center items-center">
+        {pages}
+      </div>
+    );
+
   };
 
   return (
@@ -104,23 +136,31 @@ const CharacterList = () => {
         <div className="flex justify-center mt-4 space-x-4">
           <button
             onClick={handlePrevPage}
-            className="btn-page"
+            className="btn-page my-6 mb-3"
             disabled={page === 1}
           >
             Previous
           </button>
-          <span className="text-lg pt-1 text-white font-audiowide items-center">{`Page ${page} of ${totalPages}`}</span>
+
+          <div className="flex flex-col items-center">
+            <span className="font-pages">{`Page ${page} of ${totalPages}`}</span>
+            <div>{renderPagination()}</div>
+          </div>
+          
           <button
             onClick={handleNextPage}
-            className="btn-page"
+            className="btn-page my-6 mb-3"
             disabled={page === totalPages}
           >
             Next
           </button>
         </div>
+
+        
       </div>
     </section>
   );
+  
 };
 
 export default CharacterList;

@@ -28,6 +28,10 @@
     font-family: 'Get Schwifty', sans-serif;
   }
 
+  .font-pages {
+    @apply text-lg text-white font-audiowide;
+  }
+
   
 }
 
