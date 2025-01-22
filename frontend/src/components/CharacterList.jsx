@@ -112,30 +112,41 @@ const CharacterList = () => {
           </p>
         </div>
 
-        <div className="w-full h-auto p-4 items-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {characters.map((character) => (
-              <div
-                key={character.id}
-                className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
-              >
-                <Link to={`/character/${character.id}`}>
-                  <img
-                    src={character.image}
-                    alt={character.name}
-                    className="w-full h-56 object-cover"
-                  />
-                  <div className="p-1">
-                    <h2 className="text-lg font-bold text-center font-audiowide">
-                      {character.name}
-                    </h2>
-                  </div>
-                </Link>
-              </div>
-            ))}
+        <motion.div
+          className="w-full h-auto p-4 items-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.3 }}
+        >
+          <div className="grid-container">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              {characters.map((character) => (
+                <motion.div
+                  key={character.id}
+                  className="bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5 }}
+                >
+                  <Link to={`/character/${character.id}`}>
+                    <img
+                      src={character.image}
+                      alt={character.name}
+                      className="w-full h-56 object-cover"
+                    />
+                    <div className="p-1">
+                      <h2 className="text-lg font-bold text-center font-audiowide">
+                        {character.name}
+                      </h2>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-
+        </motion.div>
+        
         <div className="flex justify-center mt-4 space-x-4">
           <button
             onClick={handlePrevPage}
