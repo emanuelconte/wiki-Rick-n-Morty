@@ -74,7 +74,6 @@ const CharacterList = () => {
             >
               Rick and Morty Character Wiki Repository
             </a>
-            .
           </p>
         </div>
 
