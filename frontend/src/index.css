@@ -32,6 +32,11 @@
     @apply text-lg text-white font-audiowide;
   }
 
+  .char-name {
+    @apply text-5xl text-white;
+    font-family: 'Audiowide', sans-serif;
+  }
+
 
   
 }
