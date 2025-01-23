@@ -99,7 +99,7 @@ const CharacterDetails = () => {
           </div>
       </div>
 
-      <div className="flex justify-center mt-6 space-x-4">
+      <div className="flex justify-center mt-6 mb-8 space-x-4">
         <button
           onClick={handlePreviousCharacter}
           className="btn-page"
