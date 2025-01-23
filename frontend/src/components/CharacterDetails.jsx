@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 const CharacterDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [character, setCharacter] = useState(null);
   const [episodes, setEpisodes] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const goToHome = () => {
     window.location.href = "/";
@@ -35,6 +37,21 @@ const CharacterDetails = () => {
     fetchCharacter();
   }, [id]);
 
+  const handleNextCharacter = () => {
+    const nextId = parseInt(id) + 1;
+    navigate(`/character/${nextId}`);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handlePreviousCharacter = () => {
+    const prevId = parseInt(id) - 1;
+    if (prevId > 0) {
+      navigate(`/character/${prevId}`);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  if (error) return <div>Error: {error}</div>;
   if (loading) return <div>Loading...</div>;
   if (!character) return <div>Character not found</div>;
 
@@ -80,10 +97,21 @@ const CharacterDetails = () => {
               ))}
             </ul>
           </div>
-        
-        
-
       </div>
+
+      <div className="flex justify-center mt-6 space-x-4">
+        <button
+          onClick={handlePreviousCharacter}
+          className="btn-page"
+          disabled={id <= 1}
+        >
+          Previous
+        </button>
+        <button onClick={handleNextCharacter} className="btn-page">
+          Next
+        </button>
+      </div>
+
     </section>
   );
 };
