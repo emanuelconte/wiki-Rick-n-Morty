@@ -32,8 +32,8 @@ const CharacterDetails = () => {
   if (!character) return <div>Character not found</div>;
 
   return (
-    <div className="container items-center">
-      <div className="p-8 m-8 items-center">
+    <section className="w-full">
+      <div className="p-8 m-8 items-center add-border">
         <h1 
           className="section-title p-2" 
           onClick={goToHome}
@@ -56,7 +56,7 @@ const CharacterDetails = () => {
         </div>
         
       </div>
-    </div>
+    </section>
   );
 };
 
