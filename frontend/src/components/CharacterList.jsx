@@ -43,6 +43,10 @@ const CharacterList = () => {
     setPage(pageNumber);
   }
 
+  const goToHome = () => {
+    window.location.href = "/";
+  };
+
   const renderPagination = () => {
     const pages = [];
     const maxPagesToShow = 5;
@@ -74,9 +78,12 @@ const CharacterList = () => {
   return (
     <section className="w-full">
       <div className="p-12 w-full">
-        <div className="p-8 m-8 items-center">
-          <h1 className="section-title p-2">Rick and Morty Wiki</h1>
-        </div>
+        <h1 
+          className="section-title p-2" 
+          onClick={goToHome}
+          style={{ cursor: "pointer" }} >
+            Rick and Morty Wiki
+        </h1>
 
         <div className="text-center my-6 p-4 text-white rounded-lg shadow-md">
           <p className="text-lg leading-relaxed">

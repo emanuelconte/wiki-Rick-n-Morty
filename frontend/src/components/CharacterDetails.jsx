@@ -6,6 +6,10 @@ const CharacterDetails = () => {
   const [character, setCharacter] = useState(null);
   const [loading, setLoading] = useState(true);
 
+  const goToHome = () => {
+    window.location.href = "/";
+  };
+
   useEffect(() => {
     const fetchCharacter = async () => {
       try {
@@ -30,7 +34,12 @@ const CharacterDetails = () => {
   return (
     <div className="container items-center">
       <div className="p-8 m-8 items-center">
-        <h1 className="section-title p-2">Rick and Morty Wiki</h1>
+        <h1 
+          className="section-title p-2" 
+          onClick={goToHome}
+          style={{ cursor: "pointer" }} >
+            Rick and Morty Wiki
+        </h1>
       </div>
 
       <div className="m-12 p-8 flex flex-row">
