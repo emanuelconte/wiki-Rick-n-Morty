@@ -36,7 +36,7 @@ npm install
 ```
 
 ### 3. Run the Project
-Start the development server with the command:
+Start the development server with the command :
 ```bash
 npm start
 ```
