@@ -7,7 +7,7 @@ This project is a dynamic character Wiki developed using **React** and **JavaScr
 - Dynamic listing of characters.
 - Search for characters.
 - Detailed view of individual character information.
-- User-friendly navigation between pages.
+- User-friendly navigation between pages .
 
 ## Live Demo
 Access the live version of the app here: [Wiki Rick and Morty](https://wiki-rick-n-morty-app.vercel.app)
