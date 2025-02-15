@@ -22,7 +22,7 @@ Access the live version of the app here: [Wiki Rick and Morty](https://wiki-rick
 - **HTTP Requests**: Axios
 
 ## Installation and Setup
-Follow the steps below to set up the project in your local environment
+Follow the steps below to set up the project in your local environment:
 
 ### 1. Clone the Repository
 ```bash
